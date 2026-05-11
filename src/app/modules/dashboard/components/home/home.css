@@ -1,0 +1,66 @@
+.dashboard-home-container {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.welcome-banner {
+  margin-bottom: 32px;
+}
+
+.welcome-banner h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+.welcome-banner p {
+  color: #666;
+  margin-top: 8px;
+  font-size: 1.1rem;
+}
+
+/* Cuadrícula para las tarjetas que se adapta a cualquier pantalla */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  border-left: 5px solid #3f51b5; /* Borde de color decorativo */
+  transition: transform 0.2s ease-in-out;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px); /* Pequeño efecto al pasar el mouse */
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 16px 0 0 16px;
+  color: #2c3e50;
+}
+
+.text-warn {
+  color: #e67e22 !important;
+}
+
+/* Colores para los iconos */
+.icon-blue { color: #3f51b5; transform: scale(1.5); }
+.icon-orange { color: #e67e22; transform: scale(1.5); }
+.icon-green { color: #2ecc71; transform: scale(1.5); }
+
+/* Sección de botones */
+.actions-card {
+  padding-bottom: 16px;
+}
+
+.actions-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}

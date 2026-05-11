@@ -15,11 +15,12 @@
             <button mat-button [matMenuTriggerFor]="menu">
               <mat-icon>person_outline</mat-icon>
             </button>
-            <mat-menu #menu="matMenu">
-              <mat-icon>exit_to_app</mat-icon>
-              Cerrar Sesión
-            </mat-menu>
-          </li>
+           <mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="onLogout()">
+    <mat-icon>exit_to_app</mat-icon>
+    <span>Cerrar Sesión</span>
+  </button>
+</mat-menu>
         </ul>
     </div>
   </mat-toolbar>

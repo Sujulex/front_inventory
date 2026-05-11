@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>{{ estadoFormulario }} Categoría</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="categoryForm">
+    <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 10px;">
+      
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre de la Categoría</mat-label>
+        <input matInput formControlName="name" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Descripción</mat-label>
+        <textarea matInput formControlName="description" rows="3" required></textarea>
+      </mat-form-field>
+
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button color="warn" (click)="onCancel()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="onSave()" [disabled]="categoryForm.invalid">Guardar</button>
+</mat-dialog-actions>

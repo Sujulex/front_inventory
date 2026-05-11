@@ -1,1 +1,62 @@
-<p>home works!</p>
+<div class="dashboard-home-container">
+  <div class="welcome-banner">
+    <h1>¡Bienvenido al Sistema de Inventario! 📦</h1>
+    <p>Aquí tienes un resumen general del estado de tus productos y operaciones.</p>
+  </div>
+
+  <div class="stats-grid">
+    
+    <mat-card class="stat-card">
+      <mat-card-header>
+        <mat-icon mat-card-avatar class="icon-blue">inventory_2</mat-icon>
+        <mat-card-title>Productos Totales</mat-card-title>
+        <mat-card-subtitle>Registrados en sistema</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <h2 class="stat-number">{{ totalProducts }}</h2>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="stat-card">
+      <mat-card-header>
+        <mat-icon mat-card-avatar class="icon-orange">warning</mat-icon>
+        <mat-card-title>Stock Bajo</mat-card-title>
+        <mat-card-subtitle>Requieren atención</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <h2 class="stat-number text-warn">{{ lowStock }}</h2>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="stat-card">
+      <mat-card-header>
+        <mat-icon mat-card-avatar class="icon-green">category</mat-icon>
+        <mat-card-title>Categorías</mat-card-title>
+        <mat-card-subtitle>Clasificaciones activas</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <h2 class="stat-number">{{ totalCategories }}</h2>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+
+  <div class="quick-actions-section">
+    <mat-card class="actions-card">
+      <mat-card-header>
+        <mat-card-title>Acciones Rápidas</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="actions-buttons">
+        <button mat-raised-button color="primary">
+          <mat-icon>add</mat-icon> Nuevo Producto
+        </button>
+        <button mat-raised-button color="accent">
+          <mat-icon>point_of_sale</mat-icon> Nueva Venta
+        </button>
+        <button mat-raised-button>
+          <mat-icon>bar_chart</mat-icon> Ver Reportes
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
